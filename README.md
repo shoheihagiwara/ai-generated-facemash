@@ -5,3 +5,5 @@
 2. Run `npm install`
 3. Run `npm start`
 
+## About Images
+All the imsages were downloaded from https://generated.photos/

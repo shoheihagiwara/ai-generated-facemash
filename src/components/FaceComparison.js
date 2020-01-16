@@ -1,11 +1,11 @@
 import React from 'react';
 import FaceCard from './FaceCard'
 
-const FaceComparison = (params) => {
+const FaceComparison = ({onFaceClick}) => {
     return (
-        <div>
-            <FaceCard />
-            <FaceCard />
+        <div  style={{ display: 'flex', justifyContent: 'center'}}>
+            <FaceCard onFaceClick={onFaceClick} />
+            <FaceCard onFaceClick={onFaceClick} />
         </div>
     );
 }

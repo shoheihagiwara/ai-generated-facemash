@@ -1,19 +1,13 @@
 import React from 'react';
 
 const Navigation = ({ page, onRankingClick, onGoSeeFacesClick }) => {
-    if (page === 'main') {
+        let text = page === 'main' ? "Ranking": "Go See Faces";
+        let onClickFunction = page === 'main' ? onRankingClick: onGoSeeFacesClick;
         return (
             <nav style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <p onClick={onRankingClick} className='f3 link dim black underline pa3 pointer'>Ranking</p>
+                <p onClick={onClickFunction} className='f3 link dim black underline pa3 pointer'>{text}</p>
             </nav>
         )
-        } else {
-            return (
-                <nav style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                    <p onClick={onGoSeeFacesClick} className='f3 link dim black underline pa3 pointer'>Go See Faces</p>
-                </nav>
-            )
-        }
     }
 
     export default Navigation;

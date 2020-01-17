@@ -3,6 +3,7 @@ import './App.css';
 import Navigation from '../components/Navigation'
 import FaceComparison from '../components/FaceComparison'
 import Ranking from '../components/Ranking';
+import Footer from '../components/Footer';
 import 'tachyons';
 
 class App extends Component {
@@ -45,12 +46,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App" >
-        {/* 
-        <Particles className='particles'
-          params={particlesOptions}
-        />
-        */}
+      <div className="App" style={{display: "flex", flexDirection: "column"}}>
         <Navigation page={this.state.page} onRankingClick={this.setPageRanking} onGoSeeFacesClick={this.setPageMain} />
         <h1 className={"title"}>Who Has a Nicer Smile?</h1>
         {
@@ -58,6 +54,7 @@ class App extends Component {
             <FaceComparison onFaceClick={this.onFaceClick} /> :
             <Ranking ranking={this.state.ranking}/>
         }
+        <Footer />
       </div>
     );
   }

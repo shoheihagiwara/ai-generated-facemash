@@ -7,6 +7,10 @@ const Ranking = ({ ranking }) => {
     let array = Object.entries(ranking);
     array.sort((a, b) => -(a[1] - b[1]));
 
+    if (array.length === 0) {
+        return <p className="center b">No result yet. Go back and click more faces.</p>
+    }
+
     return (
         <div>
             {/*
